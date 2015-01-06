@@ -1,6 +1,6 @@
 {
 	"name": "define-properties",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "Jordan Harband",
 	"description": "Define multiple non-enumerable properties at once. Uses `Object.defineProperty` when available; falls back to standard assignment in older engines.",
 	"license": "MIT",
