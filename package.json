@@ -29,16 +29,16 @@
 		"ES5"
 	],
 	"dependencies": {
-		"foreach": "~2.0.5",
-		"object-keys": "~1.0.3"
+		"foreach": "^2.0.5",
+		"object-keys": "^1.0.3"
 	},
 	"devDependencies": {
-		"tape": "~3.5.0",
-		"covert": "1.0.0",
-		"jscs": "~1.11.0",
-		"editorconfig-tools": "~0.0.1",
-		"nsp": "~1.0.0",
-		"eslint": "~0.13.0"
+		"tape": "^3.5.0",
+		"covert": "^1.0.1",
+		"jscs": "^1.11.3",
+		"editorconfig-tools": "^0.0.1",
+		"nsp": "^1.0.0",
+		"eslint": "^0.14.1"
 	},
 	"testling": {
 		"files": "test/index.js",
