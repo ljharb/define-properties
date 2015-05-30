@@ -12,7 +12,10 @@ var isFunction = function (fn) {
 var arePropertyDescriptorsSupported = function () {
 	var obj = {};
 	try {
-		Object.defineProperty(obj, 'x', { value: obj });
+		Object.defineProperty(obj, 'x', { value: obj, enumerable: false });
+        /* eslint-disable no-unused-vars */
+        for (var _ in obj) { return false; }
+        /* eslint-enable no-unused-vars */
 		return obj.x === obj;
 	} catch (e) { /* this is IE 8. */
 		return false;
