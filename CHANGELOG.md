@@ -1,3 +1,7 @@
+1.0.3 / 2015-05-30
+=================
+ * Using a more reliable check for supported property descriptors.
+
 1.0.2 / 2015-05-23
 =================
  * Test up to `io.js` `v2.0`
