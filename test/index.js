@@ -3,7 +3,7 @@ var test = require('tape');
 var keys = require('object-keys');
 
 var arePropertyDescriptorsSupported = function () {
-	var obj = {a: 1};
+	var obj = { a: 1 };
 	try {
 		Object.defineProperty(obj, 'x', { value: obj });
 		return obj.x === obj;
