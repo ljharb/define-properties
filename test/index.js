@@ -13,6 +13,8 @@ var arePropertyDescriptorsSupported = function () {
 };
 var descriptorsSupported = !!Object.defineProperty && arePropertyDescriptorsSupported();
 
+var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
+
 test('defineProperties', function (dt) {
 
 	dt.test('with descriptor support', { skip: !descriptorsSupported }, function (t) {
@@ -100,4 +102,23 @@ test('defineProperties', function (dt) {
 	});
 
 	dt.end();
+});
+
+test('symbols', { skip: !hasSymbols }, function (t) {
+	var sym = Symbol('foo');
+	var obj = {};
+	var aValue = {};
+	var bValue = {};
+	var properties = { a: aValue };
+	properties[sym] = bValue;
+
+	define(obj, properties);
+
+	t.deepEqual(Object.keys(obj), [], 'object has no enumerable keys');
+	t.deepEqual(Object.getOwnPropertyNames(obj), ['a'], 'object has non-enumerable "a" key');
+	t.deepEqual(Object.getOwnPropertySymbols(obj), [sym], 'object has non-enumerable symbol key');
+	t.equal(obj.a, aValue, 'string keyed value is defined');
+	t.equal(obj[sym], bValue, 'symbol keyed value is defined');
+
+	t.end();
 });

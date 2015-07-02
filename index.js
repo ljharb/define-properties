@@ -2,6 +2,7 @@
 
 var keys = require('object-keys');
 var foreach = require('foreach');
+var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
 
 var toStr = Object.prototype.toString;
 
@@ -41,7 +42,11 @@ var defineProperty = function (object, name, value, predicate) {
 
 var defineProperties = function (object, map) {
 	var predicates = arguments.length > 2 ? arguments[2] : {};
-	foreach(keys(map), function (name) {
+	var props = keys(map);
+	if (hasSymbols) {
+		props = props.concat(Object.getOwnPropertySymbols(map));
+	}
+	foreach(props, function (name) {
 		defineProperty(object, name, map[name], predicates[name]);
 	});
 };
