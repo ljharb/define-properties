@@ -1,3 +1,9 @@
+1.1.0 / 2015-07-01
+=================
+ * [New] Add support for symbol-valued properties.
+ * [Dev Deps] Update `nsp`, `eslint`
+ * [Tests] Test up to `io.js` `v2.3`
+
 1.0.3 / 2015-05-30
 =================
  * Using a more reliable check for supported property descriptors.
