@@ -1,3 +1,9 @@
+1.1.1 / 2015-07-21
+=================
+ * [Deps] Update `object-keys`
+ * [Dev Deps] Update `tape`, `eslint`
+ * [Tests] Test on `io.js` `v2.4`
+
 1.1.0 / 2015-07-01
 =================
  * [New] Add support for symbol-valued properties.
