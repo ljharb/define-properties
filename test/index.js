@@ -1,3 +1,5 @@
+'use strict';
+
 var define = require('../');
 var test = require('tape');
 var keys = require('object-keys');

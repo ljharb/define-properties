@@ -30,15 +30,15 @@
 	],
 	"dependencies": {
 		"foreach": "^2.0.5",
-		"object-keys": "^1.0.5"
+		"object-keys": "^1.0.7"
 	},
 	"devDependencies": {
-		"tape": "^4.0.0",
+		"tape": "^4.0.1",
 		"covert": "^1.1.0",
 		"jscs": "^1.13.1",
 		"editorconfig-tools": "^0.1.1",
 		"nsp": "^1.0.3",
-		"eslint": "^0.24.0"
+		"eslint": "^1.0.0-rc-1"
 	},
 	"testling": {
 		"files": "test/index.js",
