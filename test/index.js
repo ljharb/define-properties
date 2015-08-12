@@ -24,8 +24,8 @@ test('defineProperties', function (dt) {
 			return {
 				configurable: true,
 				enumerable: false,
-				writable: true,
-				value: value
+				value: value,
+				writable: true
 			};
 		};
 

@@ -13,7 +13,7 @@ var isFunction = function (fn) {
 var arePropertyDescriptorsSupported = function () {
 	var obj = {};
 	try {
-		Object.defineProperty(obj, 'x', { value: obj, enumerable: false });
+		Object.defineProperty(obj, 'x', { enumerable: false, value: obj });
         /* eslint-disable no-unused-vars */
         for (var _ in obj) { return false; }
         /* eslint-enable no-unused-vars */
@@ -32,8 +32,8 @@ var defineProperty = function (object, name, value, predicate) {
 		Object.defineProperty(object, name, {
 			configurable: true,
 			enumerable: false,
-			writable: true,
-			value: value
+			value: value,
+			writable: true
 		});
 	} else {
 		object[name] = value;
