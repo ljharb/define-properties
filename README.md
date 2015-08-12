@@ -69,7 +69,7 @@ if (define.supportsDescriptors) {
 Simply clone the repo, `npm install`, and run `npm test`
 
 [package-url]: https://npmjs.org/package/define-properties
-[npm-version-svg]: http://vb.teelaun.ch/ljharb/define-properties.svg
+[npm-version-svg]: http://versionbadg.es/ljharb/define-properties.svg
 [travis-svg]: https://travis-ci.org/ljharb/define-properties.svg
 [travis-url]: https://travis-ci.org/ljharb/define-properties
 [deps-svg]: https://david-dm.org/ljharb/define-properties.svg
