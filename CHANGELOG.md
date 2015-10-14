@@ -1,3 +1,10 @@
+1.1.2 / 2015-10-14
+=================
+ * [Docs] Switch from vb.teelaun.ch to versionbadg.es for the npm version badge SVG
+ * [Deps] Update `object-keys`
+ * [Dev Deps] update `jscs`, `tape`, `eslint`, `@ljharb/eslint-config`, `nsp`
+ * [Tests] up to `io.js` `v3.3`, `node` `v4.2`
+
 1.1.1 / 2015-07-21
 =================
  * [Deps] Update `object-keys`
