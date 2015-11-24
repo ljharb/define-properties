@@ -31,7 +31,7 @@
 	],
 	"dependencies": {
 		"foreach": "^2.0.5",
-		"object-keys": "^1.0.8"
+		"object-keys": "^1.0.9"
 	},
 	"devDependencies": {
 		"tape": "^4.2.2",
