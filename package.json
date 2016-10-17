@@ -5,6 +5,9 @@
 	"description": "Define multiple non-enumerable properties at once. Uses `Object.defineProperty` when available; falls back to standard assignment in older engines.",
 	"license": "MIT",
 	"main": "index.js",
+	"files": [
+		"index.js"
+	],
 	"scripts": {
 		"pretest": "npm run --silent lint",
 		"test": "npm run --silent tests-only",
