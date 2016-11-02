@@ -15,7 +15,7 @@ var arePropertyDescriptorsSupported = function () {
 };
 var descriptorsSupported = !!Object.defineProperty && arePropertyDescriptorsSupported();
 
-var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
+var hasSymbols = typeof Symbol === 'function' && typeof Symbol('foo') === 'symbol';
 
 test('defineProperties', function (dt) {
 
