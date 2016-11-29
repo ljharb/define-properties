@@ -35,12 +35,12 @@
 		"object-keys": "^1.0.11"
 	},
 	"devDependencies": {
-		"tape": "^4.6.2",
+		"tape": "^4.6.3",
 		"covert": "^1.1.0",
 		"jscs": "^3.0.7",
 		"nsp": "^2.6.2",
-		"eslint": "^3.9.1",
-		"@ljharb/eslint-config": "^8.0.0"
+		"eslint": "^3.11.1",
+		"@ljharb/eslint-config": "^9.0.1"
 	},
 	"testling": {
 		"files": "test/index.js",
