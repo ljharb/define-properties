@@ -31,7 +31,7 @@
 		"ES5"
 	],
 	"dependencies": {
-		"object-keys": "^1.0.11"
+		"object-keys": "^1.0.12"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^13.0.0",
