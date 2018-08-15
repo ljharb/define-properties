@@ -18,7 +18,6 @@ var descriptorsSupported = !!Object.defineProperty && arePropertyDescriptorsSupp
 var hasSymbols = typeof Symbol === 'function' && typeof Symbol('foo') === 'symbol';
 
 test('defineProperties', function (dt) {
-
 	dt.test('with descriptor support', { skip: !descriptorsSupported }, function (t) {
 		var getDescriptor = function (value) {
 			return {

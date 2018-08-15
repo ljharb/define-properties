@@ -34,9 +34,9 @@
 		"object-keys": "^1.0.11"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^12.2.1",
+		"@ljharb/eslint-config": "^13.0.0",
 		"covert": "^1.1.0",
-		"eslint": "^4.19.1",
+		"eslint": "^5.3.0",
 		"jscs": "^3.0.7",
 		"nsp": "^3.2.1",
 		"tape": "^4.9.0"
