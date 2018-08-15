@@ -31,7 +31,6 @@
 		"ES5"
 	],
 	"dependencies": {
-		"foreach": "^2.0.5",
 		"object-keys": "^1.0.11"
 	},
 	"devDependencies": {
