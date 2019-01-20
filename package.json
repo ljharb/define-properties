@@ -8,12 +8,14 @@
 	"scripts": {
 		"pretest": "npm run --silent lint",
 		"test": "npm run --silent tests-only",
-		"posttest": "npm run --silent security",
+		"posttest": "npm run audit",
 		"tests-only": "node test/index.js",
 		"coverage": "covert test/*.js",
 		"coverage-quiet": "covert test/*.js --quiet",
 		"lint": "eslint .",
-		"security": "nsp check"
+		"preaudit": "npm install --package-lock --package-lock-only",
+		"audit": "npm audit",
+		"postaudit": "rm package-lock.json"
 	},
 	"repository": {
 		"type": "git",
@@ -35,7 +37,6 @@
 		"@ljharb/eslint-config": "^13.0.0",
 		"covert": "^1.1.0",
 		"eslint": "^5.3.0",
-		"nsp": "^3.2.1",
 		"tape": "^4.9.0"
 	},
 	"testling": {
