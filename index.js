@@ -15,8 +15,8 @@ var arePropertyDescriptorsSupported = function () {
 	var obj = {};
 	try {
 		origDefineProperty(obj, 'x', { enumerable: false, value: obj });
-		// eslint-disable-next-line no-unused-vars, no-restricted-syntax
-		for (var _ in obj) { // jscs:ignore disallowUnusedVariables
+		// eslint-disable-next-line no-restricted-syntax
+		for (var _ in obj) {
 			return false;
 		}
 		return obj.x === obj;

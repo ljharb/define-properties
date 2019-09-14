@@ -39,26 +39,38 @@ test('defineProperties', function (dt) {
 			c: 4,
 			d: 5
 		});
-		t.deepEqual(obj, {
-			a: 1,
-			b: 2,
-			c: 3
-		}, 'existing properties were not overridden');
+		t.deepEqual(
+			obj,
+			{
+				a: 1,
+				b: 2,
+				c: 3
+			},
+			'existing properties were not overridden'
+		);
 		t.deepEqual(Object.getOwnPropertyDescriptor(obj, 'd'), getDescriptor(5), 'new property "d" was added and is not enumerable');
 		t.deepEqual(['a', 'b', 'c'], keys(obj), 'new keys are not enumerable');
 
-		define(obj, {
-			a: 2,
-			b: 3,
-			c: 4
-		}, {
-			a: function () { return true; },
-			b: function () { return false; }
-		});
-		t.deepEqual(obj, {
-			b: 2,
-			c: 3
-		}, 'properties only overriden when predicate exists and returns true');
+		define(
+			obj,
+			{
+				a: 2,
+				b: 3,
+				c: 4
+			},
+			{
+				a: function () { return true; },
+				b: function () { return false; }
+			}
+		);
+		t.deepEqual(
+			obj,
+			{
+				b: 2,
+				c: 3
+			},
+			'properties only overriden when predicate exists and returns true'
+		);
 		t.deepEqual(Object.getOwnPropertyDescriptor(obj, 'd'), getDescriptor(5), 'existing property "d" remained and is not enumerable');
 		t.deepEqual(Object.getOwnPropertyDescriptor(obj, 'a'), getDescriptor(2), 'existing property "a" was overridden and is not enumerable');
 		t.deepEqual(['b', 'c'], keys(obj), 'overridden keys are not enumerable');
@@ -77,27 +89,39 @@ test('defineProperties', function (dt) {
 			c: 4,
 			d: 5
 		});
-		t.deepEqual(obj, {
-			a: 1,
-			b: 2,
-			c: 3,
-			d: 5
-		}, 'existing properties were not overridden, new properties were added');
+		t.deepEqual(
+			obj,
+			{
+				a: 1,
+				b: 2,
+				c: 3,
+				d: 5
+			},
+			'existing properties were not overridden, new properties were added'
+		);
 
-		define(obj, {
-			a: 2,
-			b: 3,
-			c: 4
-		}, {
-			a: function () { return true; },
-			b: function () { return false; }
-		});
-		t.deepEqual(obj, {
-			a: 2,
-			b: 2,
-			c: 3,
-			d: 5
-		}, 'properties only overriden when predicate exists and returns true');
+		define(
+			obj,
+			{
+				a: 2,
+				b: 3,
+				c: 4
+			},
+			{
+				a: function () { return true; },
+				b: function () { return false; }
+			}
+		);
+		t.deepEqual(
+			obj,
+			{
+				a: 2,
+				b: 2,
+				c: 3,
+				d: 5
+			},
+			'properties only overriden when predicate exists and returns true'
+		);
 
 		t.end();
 	});
