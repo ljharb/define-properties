@@ -1,4 +1,4 @@
-#define-properties <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+# define-properties <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 [![Build Status][travis-svg]][travis-url]
 [![dependency status][deps-svg]][deps-url]
@@ -7,8 +7,6 @@
 [![Downloads][downloads-image]][downloads-url]
 
 [![npm badge][npm-badge-png]][package-url]
-
-[![browser support][testling-svg]][testling-url]
 
 Define multiple non-enumerable properties at once. Uses `Object.defineProperty` when available; falls back to standard assignment in older engines.
 Existing properties are not overridden. Accepts a map of property names to a predicate that, when true, force-overrides.
@@ -76,8 +74,6 @@ Simply clone the repo, `npm install`, and run `npm test`
 [deps-url]: https://david-dm.org/ljharb/define-properties
 [dev-deps-svg]: https://david-dm.org/ljharb/define-properties/dev-status.svg
 [dev-deps-url]: https://david-dm.org/ljharb/define-properties#info=devDependencies
-[testling-svg]: https://ci.testling.com/ljharb/define-properties.png
-[testling-url]: https://ci.testling.com/ljharb/define-properties
 [npm-badge-png]: https://nodei.co/npm/define-properties.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/define-properties.svg
 [license-url]: LICENSE
