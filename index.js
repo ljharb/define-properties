@@ -15,7 +15,7 @@ var arePropertyDescriptorsSupported = function () {
 	var obj = {};
 	try {
 		origDefineProperty(obj, 'x', { enumerable: false, value: obj });
-		// eslint-disable-next-line no-restricted-syntax
+		// eslint-disable-next-line no-restricted-syntax, no-unreachable-loop
 		for (var _ in obj) {
 			return false;
 		}
