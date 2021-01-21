@@ -12,9 +12,8 @@
 		"prepublish": "safe-publish-latest",
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
-		"posttest": "npx aud --production",
-		"tests-only": "node test",
-		"coverage": "covert test/*.js",
+		"posttest": "aud --production",
+		"tests-only": "nyc tape 'test/**/*.js'",
 		"lint": "eslint ."
 	},
 	"repository": {
@@ -36,8 +35,8 @@
 	"devDependencies": {
 		"@ljharb/eslint-config": "^17.2.0",
 		"aud": "^1.1.2",
-		"covert": "^1.1.1",
 		"eslint": "^7.7.0",
+		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
 		"tape": "^5.0.1"
 	},
