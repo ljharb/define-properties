@@ -75,6 +75,29 @@ test('defineProperties', function (dt) {
 		t.deepEqual(Object.getOwnPropertyDescriptor(obj, 'a'), getDescriptor(2), 'existing property "a" was overridden and is not enumerable');
 		t.deepEqual(['b', 'c'], keys(obj), 'overridden keys are not enumerable');
 
+		define(
+			obj,
+			{
+				a: 4,
+				b: 3,
+				c: 3
+			},
+			{
+				a: true,
+				b: true,
+				c: true
+			}
+		);
+		t.deepEqual(
+			obj,
+			{ c: 3 },
+			'properties overriden when predicate is `true` and ==='
+		);
+		t.deepEqual(Object.getOwnPropertyDescriptor(obj, 'a'), getDescriptor(4), 'existing property "a" was overridden and is not enumerable');
+		t.deepEqual(Object.getOwnPropertyDescriptor(obj, 'b'), getDescriptor(3), 'existing property "b" was overridden and is not enumerable');
+		t.deepEqual(Object.getOwnPropertyDescriptor(obj, 'd'), getDescriptor(5), 'existing property "d" remained and is not enumerable');
+		t.deepEqual(['c'], keys(obj), 'overridden keys are not enumerable');
+
 		t.end();
 	});
 
