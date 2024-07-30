@@ -35,8 +35,8 @@
 		"ES5"
 	],
 	"dependencies": {
-		"define-data-property": "^1.0.1",
-		"has-property-descriptors": "^1.0.0",
+		"define-data-property": "^1.1.4",
+		"has-property-descriptors": "^1.0.2",
 		"object-keys": "^1.1.1"
 	},
 	"devDependencies": {
