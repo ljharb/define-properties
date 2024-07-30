@@ -18,11 +18,14 @@ Existing properties are not overridden. Accepts a map of property names to a pre
 var define = require('define-properties');
 var assert = require('assert');
 
-var obj = define({ a: 1, b: 2 }, {
+var obj = { a: 1, b: 2 };
+
+define(obj, {
 	a: 10,
 	b: 20,
 	c: 30
 });
+
 assert(obj.a === 1);
 assert(obj.b === 2);
 assert(obj.c === 30);
@@ -32,7 +35,7 @@ if (define.supportsDescriptors) {
 		configurable: true,
 		enumerable: false,
 		value: 30,
-		writable: false
+		writable: true
 	});
 }
 ```
@@ -42,7 +45,9 @@ Then, with predicates:
 var define = require('define-properties');
 var assert = require('assert');
 
-var obj = define({ a: 1, b: 2, c: 3 }, {
+var obj = { a: 1, b: 2, c: 3 };
+
+define(obj, {
 	a: 10,
 	b: 20,
 	c: 30
@@ -50,6 +55,7 @@ var obj = define({ a: 1, b: 2, c: 3 }, {
 	a: function () { return false; },
 	b: function () { return true; }
 });
+
 assert(obj.a === 1);
 assert(obj.b === 20);
 assert(obj.c === 3);
@@ -59,7 +65,7 @@ if (define.supportsDescriptors) {
 		configurable: true,
 		enumerable: false,
 		value: 20,
-		writable: false
+		writable: true
 	});
 }
 ```
