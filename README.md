@@ -86,5 +86,5 @@ Simply clone the repo, `npm install`, and run `npm test`
 [downloads-url]: https://npm-stat.com/charts.html?package=define-properties
 [codecov-image]: https://codecov.io/gh/ljharb/define-properties/branch/main/graphs/badge.svg
 [codecov-url]: https://app.codecov.io/gh/ljharb/define-properties/
-[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/ljharb/define-properties
+[actions-image]: https://img.shields.io/github/check-runs/ljharb/define-properties/main
 [actions-url]: https://github.com/ljharb/define-properties/actions
